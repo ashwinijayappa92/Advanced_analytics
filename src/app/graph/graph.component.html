@@ -1,0 +1,8 @@
+    <div class="card-body">
+        <span class="pull-right cursor-pointer" style="margin-top: -20px">
+          <p-dropdown [options]="months" (onChange) ="getmonths()" [(ngModel)]="selectedCity"></p-dropdown>
+        </span>
+        <div>
+          <p-chart #baseChart type="bar" [responsive]="true" [options]="options" [data]="data" ></p-chart>
+        </div>
+      </div>

@@ -1,0 +1,342 @@
+body{
+    background-color:#edf4f8;
+}
+.contain_class{
+    width: 100%;
+    height: auto;
+    background-color: #353e54;
+}
+.contain_class2{
+    width: 100%;
+    height: 280px;
+    background-color: #353e54;
+}
+.contain_class1{
+    margin-top: -52px;
+    background-color:#fff !important;
+    border-radius:5px;
+    margin-left: 59px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+  
+
+}
+.container{
+ max-width:100%
+}
+.Microbiology-Challen {
+    width: 192px;
+    height: 22px;
+    font-family: AkzidenzGroteskStd;
+    font-size: 19px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+  }
+  .Analytical-Dosage {
+    width: 146px;
+    height: 22px;
+    font-family: AkzidenzGroteskStd;
+    font-size: 19px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #8993ac;
+  }
+  .Physical-Stability {
+    width: 137px;
+    height: 22px;
+    font-family: AkzidenzGroteskStd;
+    font-size: 19px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #8993ac;
+  }
+  .Allergy {
+    width: 56px;
+    height: 22px;
+    font-family: AkzidenzGroteskStd;
+    font-size: 19px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #8993ac;
+  }
+  .col-sm-3 {
+    flex: 0 0 25%;
+    max-width: 6%;
+}
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    color: #f9f9f9;
+    font-family: OpenSans;
+    font-size: 14px;
+    letter-spacing: normal;
+    /* font-weight: normal; */
+    /* font-style: normal; */
+    /* font-stretch: normal; */
+    line-height: normal;
+    /* letter-spacing: normal; */
+}
+.cancel{
+    background-color: transparent !important;
+ }
+ .btn-primary{
+    background-color: #f25f5c ;
+    border: 1px solid #f25f5c !important;
+ }
+ .form_pad{
+    padding-top: 40px;
+    padding-left:39px;
+ }
+
+ .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #353e54;
+    border-color: #fff;
+}
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(242, 95, 92, 0.42) !important;
+}
+.btn-primary.focus, .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(202, 36, 33, 0.49);
+}
+
+.project{
+    font-family: AkzidenzGroteskStd;
+  font-size: 18px;
+  color: #151515;
+
+}
+.results{
+    color: #4a4a4a;
+    font-family: AkzidenzGroteskStd;
+  font-size: 18px;
+}
+.table_data{
+    font-family: Arial;
+  font-size: 13px;
+  font-weight: normal;
+  color: #151515;
+}
+.table_items{
+    font-family: Arial;
+    font-size: 13px;
+    font-weight: normal;
+    color: #4d4e4e;
+}
+.Bacteria-Pass {
+    font-family: AkzidenzGroteskStd;
+    font-size: 18px;
+    color: #4d4e4e;
+
+  }
+  .img_icon{
+    width: 49px;
+    height: 36px;
+  }
+  .results_table{
+    font-family: AkzidenzGroteskStd;
+    font-size: 18px;
+    color: #2b3b4c;
+  }
+.result_form{
+    font-family: Arial;
+    font-size: 13px;
+    color: #31394d;
+    text-align: right;
+  
+}
+
+.result_form_1{
+    font-family: Arial;
+    font-size: 13px;
+    color: #31394d;
+    
+    text-align: left;
+}
+.confidence{
+    font-family: Arial;
+    font-size: 18px;
+    color: #f0f1f4;
+    text-align: center;
+}
+
+.log_reduction{
+    font-family: Arial;
+    font-size: 13px;
+    color: #f0f1f4;
+    text-align: center;
+}
+.btn-primary[_ngcontent-c2]:not(:disabled):not(.disabled).active, .btn-primary[_ngcontent-c2]:not(:disabled):not(.disabled):active, .show[_ngcontent-c2] > .btn-primary.dropdown-toggle[_ngcontent-c2] {
+    color: #fff;
+    background-color: #353e54;
+    border-color: #fff;
+}
+.clear_bt{
+    background-color: #353e54;
+    border: 1px solid #f25f5c !important;
+  
+}
+.search{
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+
+.form_input{
+    
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+.table-bordered {
+    /* border: 1px solid #dee2e6; */
+    margin-right: 45px;
+    margin-left: 30px;
+    margin-bottom: 3rem;
+   
+    background-color: white;
+    border: none;
+  
+}
+.row2{
+    background-color: #fff;
+    margin-right: -15px;
+    margin-left: -15px;
+   
+}
+
+.criteria{
+    font-family: Arial;
+  font-size: 13px;
+  color: #9b9b9b;
+  margin-bottom: 1px;
+}
+
+.div_pad{
+    display: block;
+    padding: 10px;
+   
+    text-align: justify;
+}
+.first_tab{
+    margin-top: -30px;
+background-color: #fff !important;
+border-radius: 5px;
+margin-left: 25px;
+width: 100%;
+margin-right:45px;
+box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+
+}
+.first_tab2{
+    margin-top: 44px;
+    background-color: #fff !important;
+border-radius: 5px;
+margin-left: 25px;
+width: 100%;
+margin-right:45px;
+box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+
+}
+.topical{
+    margin-top: -14px;
+    margin-left: 19px;
+
+}   
+
+
+
+
+@media screen and (min-width:900px){
+    .form-control {
+        display: block;
+        width: 100%;
+        height: 50px;
+        height: calc(2.25rem + 2px);
+        padding: .375rem .75rem;
+        font-size: 14px;
+        line-height: 1.5;
+        color:#495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+    .row2{
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 3px 0 rgba(10, 11, 12, 0.34);
+        background-color: #ffffff;
+        margin-right: 51px;
+        margin-left: 59px;
+        margin-top: 3rem;
+    }
+
+    .row1 {
+        display: flex;
+        border-radius: 5px;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+        background-color: #ffffff;
+        flex-wrap: wrap;
+        margin-right: 51px;
+        margin-left: 59px;
+    }
+
+    
+} 
+
+
+
+@media screen and (max-width:900px){
+    .contain_class1{
+        margin-top: auto;
+        background-color:#fff !important;
+        border-radius:5px
+    }
+    .table-bordered {
+        /* border: 1px solid #dee2e6; */
+        margin: auto;
+       padding:auto;
+        background-color: white;
+        border: none;
+    }
+    .form_pad{
+        padding-top: 0px;
+        
+     }
+
+     .first_tab{
+        margin-top:auto;
+   
+    
+    }
+    .first_tab2{
+        margin-top: auto;
+      
+    
+    }
+    .contain_class2{
+        width: 100%;
+        height: auto;
+        background-color: #353e54;
+    }
+
+    .form_pad{
+        padding:auto ;
+       
+     }
+
+    
+} 

@@ -1,0 +1,161 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import './app/app.component.css';
+/* @import url(//db.onlinewebfonts.com/c/36d3456d52216afd558c46fa599024b7?family=RMOpensansW00-Regular); */
+
+@font-face{
+   font-family:AkzidenzGrotesk;
+   src: url("./assets/fonts/akzidenz-grotesk-light.ttf") };
+
+@font-face{
+   font-family:OpenSans;
+   src: url("./assets/fonts/OpenSans-Light.ttf") };
+   
+   @import '../node_modules/primeng/resources/themes/omega/theme.css';
+@import '../node_modules/primeng/resources/primeng.min.css';
+
+@media only screen and (max-width: 480px) {
+	body {
+	font-size: 20px;
+	}
+	}
+
+.mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #005cbf;
+    height:10px;width:10px;
+    position:center;
+    
+    }
+ 
+  #processing {
+	position: fixed;
+	z-index: 10000;
+	height: 2em;
+	width: 2em;
+	overflow: show;
+	margin: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+#processing:before {
+	content: '';
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+ 
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+	background-color: #f25f5c;
+	height:4px;
+}
+
+.test2 {
+    white-space: nowrap; 
+    width: 100px; 
+  
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .mat-checkbox-layout .mat-checkbox-label {
+	line-height: 24px;
+	white-space: nowrap; 
+    width: 100px; 
+  
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background-color: #4a90e2;
+}
+
+.mat-checkbox-layout .mat-checkbox-label {
+    line-height: 24px;
+    white-space: nowrap;
+    width: 100px;
+    overflow: hidden;
+    color: #fff;
+    font-family: arial;
+    font-size: 13px;
+    text-overflow: ellipsis;
+}
+
+.mat-checkbox-frame {
+    background-color: white !important;
+    transition: border-color 90ms cubic-bezier(0,0,.2,.1);
+    border-width: none !important;
+    border-style: none !important;
+}
+
+.mat-tab-link {
+	color: #fff;
+    font-family: AkzidenzGrotesk;
+    font-size: 19px;
+    height: 48px;
+    padding: 0 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+    opacity: .6;
+    min-width: 215px;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    vertical-align: top;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+.mat-tab-nav-bar {
+    border-bottom: 2px solid rgba(187, 184, 184, 0.22);
+}
+.ui-dropdown label.ui-dropdown-label {
+    cursor: pointer;
+    width: 188px;
+    height: 50px;
+    border: 1px solid #bfbdbd;
+    font-size: 18px;
+    font-family: arial;
+}
+
+body .ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item.ui-state-highlight, body .ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item-group.ui-state-highlight {
+    color: #ffffff;
+    background-color: #007ad9;
+    width: 188px;
+}
+body .ui-dropdown {
+   width: 188px !important;
+    border: 1px solid #a6a6a6;
+  
+}
+body .ui-dropdown .ui-dropdown-trigger {
+     background-color: transparent !important;
+    width: 2em;
+    line-height: 2em;
+    text-align: center;
+    padding: 0;
+    color: #848484;
+}
+body .ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item.ui-state-highlight, body .ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item-group.ui-state-highlight {
+    color: #9a9191 !important;
+	background-color: #ffffff !important;
+	width: 186px;
+	margin: 1px
+}
+
+.ui-dropdown label.ui-dropdown-label {
+    cursor: pointer;
+	width: 188px !important;
+	
+}

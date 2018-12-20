@@ -1,0 +1,87 @@
+
+
+
+ <div class="mr-2 ml-4 mt-2 ">
+   <div> 
+    <nav mat-tab-nav-bar>
+            <a matTabLink style="color:#fff;" *ngFor="let link of routeLinks" [routerLink]="['/'+link.link]" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">
+              {{link.label}}
+            </a>
+          </nav>
+    <router-outlet></router-outlet>
+    </div>
+  </div> 
+
+ 
+
+<!----<div class="container">
+    <div class="row">
+      <div class="col">Column</div>
+      <div class="col">Column</div>
+      <div class="w-100"></div>
+      <div class="col">Column</div>
+      <div class="col">Column</div>
+    </div>
+  </div>-->
+
+
+ <!----  <div class="container">
+      
+         <div class="row">
+        <div class="col-sm-6 align-self-center buttons_styles">
+            <div class="titles_style">Regulatory Insights</div>
+        </div>
+      
+            <div class="col-sm-6 align-self-center buttons_styles">
+                <div class="titles_style">
+                    Product Traceability
+                </div>
+          
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 align-self-center">
+        <div class="card card-block">
+            Health Authority Submissions
+        </div>
+      </div>
+      <div class="col-sm-6 align-self-center">
+        <div class="card card-block">
+            Image Recognition
+          </div>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 align-self-center">
+          <div class="card card-block">
+            Detecting Adverse Events and Effects
+          </div>
+          </div>
+          <div class="col-sm-6 align-self-center">
+            <div class="card card-block">
+              Worker Bots
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 align-self-center">
+              <div class="card card-block">
+                  Clinical Trials
+              </div>
+              </div>
+              <div class="col-sm-6 align-self-center">
+                <div class="card card-block">
+                    Issue Detection
+                </div>
+              </div>
+            </div>
+        
+
+   </div>-->
+
+  <!----  <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile>1</mat-grid-tile>
+        <mat-grid-tile>2</mat-grid-tile>
+        <mat-grid-tile>3</mat-grid-tile>
+        <mat-grid-tile>4</mat-grid-tile>
+      </mat-grid-list>-->

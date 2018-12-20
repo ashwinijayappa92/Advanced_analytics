@@ -1,0 +1,239 @@
+
+<div class="container contain_class2">
+    <div class="row">
+<form class="form-inline form_pad" [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)" >
+          <div class="row"> 
+          <div class="form-group col-md-2  mb-2">
+              
+              <label for="formGroupExampleInput " class="pl-1 pb-2">Formula Number <img src="./assets/images/question.png"></label>
+              <input type="text" class="form-control form_input" id="formGroupExampleInput" name="fname" formControlName="fname" placeholder="Formula No.">
+              
+            </div>
+            <div class="form-group col-md-2  mb-2">
+                <label for="formGroupExampleInput2" class="pb-2">Time Point</label>
+                <input type="text" class="form-control form_input" id="formGroupExampleInput2" name="lname" formControlName="lname" placeholder="Sample size">
+            </div>
+
+           
+            <div class="form-group col-md-2  mb-2">
+                <label for="formGroupExampleInput2" class="pb-2">Package Type</label>
+        <select class="form-control form_input" name="pname" formControlName="pname">
+          
+            <option *ngFor="let pt of pakageTypearr">
+                {{pt}}
+              </option>
+          </select>
+              </div>
+
+              <div class="form-group col-md-2  mb-2">
+                  <label for="formGroupExampleInput2" class="pb-2">Category</label>
+                  <select class="form-control form_input"  id="country" name="country" formControlName="country">
+                      <option *ngFor="let country of category" [value]="country.value">{{country.name}}</option>
+                    </select>
+              </div>
+
+              <div class="form-group col-md-2  mb-2">
+                  <label for="formGroupExampleInput2">Sub Category</label>
+                  <select class="form-control form_input" id="state" name="state"  formControlName="state">
+                      <option *ngFor="let state of sub_category" [value]="state.value">{{state.name}}</option>
+                    </select>
+              </div>
+
+
+
+
+              
+              <div class="form-group col-md-2 btn-toolbar">
+                  
+                  <button type="submit" class="btn btn-primary  search serach_btn ">Search</button>
+                  
+                  <button type="submit" class="btn btn-primary  search clear_bt ">Clear</button>
+                  </div>
+          </div>
+          </form>
+        
+     </div>
+
+     <div class="row">
+          <div class="col-12 h-25"> 
+            <h5 class="title pl-3 ml-2 mt-3 " >Select the Ingredient</h5>
+            </div>
+            
+            <div class="col-2">
+                <h5 class="title pl-3 ml-2 mt-2 ">Ingredients</h5>
+              </div>
+                
+            <div class="col-1">
+              <mat-checkbox class="checkbox">Ingredient 1</mat-checkbox>
+              </div>
+              
+              <div class="col-1">
+                  <mat-checkbox class="checkbox">Ingredient 1</mat-checkbox>
+                </div>
+                <div class="col-1">
+                    <mat-checkbox class="checkbox">Ingredient 1</mat-checkbox>
+                  </div>
+                  <div class="col-1">
+                      <mat-checkbox class="checkbox">Ingredient 1</mat-checkbox>
+                    </div>
+                    <div class="col-1">
+                        <mat-checkbox class="checkbox">Ingredient 1</mat-checkbox>
+                      </div>
+                      <div class="col-1">
+                          <mat-checkbox class="checkbox">Ingredient 1</mat-checkbox>
+                        </div>
+                        <div class="col-1">
+                            <mat-checkbox class="checkbox">Ingredient 1</mat-checkbox>
+                          </div>
+                         
+                      
+            </div>
+
+            <div class="row">
+                <div class="col-2">
+                    <h5 class="title pl-3 ml-2 mt-2 ">Initial Concentration</h5>
+                  </div>
+                  <div class="col-1">
+                      <input type="number" value="0.3" class="fields">
+                    </div>
+                    <div class="col-1">
+                        <input type="number" value="0.3" class="fields">
+                      </div>
+                      <div class="col-1">
+                          <input type="number" value="0.3" class="fields">
+                        </div>
+                        <div class="col-1">
+                            <input type="number" value="0.3" class="fields">
+                          </div>
+                          <div class="col-1">
+                              <input type="number" value="0.3" class="fields">
+                            </div>
+                <div class="col-1">
+                    <input type="number" value="0.3" class="fields">
+                  </div>
+
+                  <div class="col-1">
+                      <input type="number" value="0.3" class="fields">
+                    </div>
+      
+              </div>
+
+</div>
+<div class="container-fluid contain_class" style=" background-color: #edf4f8;">
+
+    <div class="row">
+        <div class="row first_tab"  style="background-color:#fff">
+        
+          <div class="col-9">
+              <h4 class="project mt-3 pl-4"> Project Details </h4>
+          <div class="row">
+            <div class="col-3">
+  
+                <div class="div_pad table_data pl-4">
+                    Project Name
+                  </div>
+                  <div class="div_pad table_data pl-4">
+                      Test Article
+                    </div>
+                    <div class="div_pad table_data pl-4">
+                        Product
+                      </div>
+            </div>
+            <div class="col-3">
+  
+                <div class="div_pad table_data pl-4">
+                    ST-VDR13-0164
+                </div>
+                <div class="div_pad table_data pl-4">
+                    VDR-2013-00428-NE-A
+                  </div>
+                  <div class="div_pad table_data pl-4">
+                      PR-014344
+                    </div>
+  
+              </div>
+              <div class="col-3">
+  
+                  <div class="div_pad table_data pl-4">
+                      Formula
+  
+                    </div>
+                    <div class="div_pad table_data pl-4 ">
+                        Batch Type
+                      </div>
+                      <div class="div_pad table_data pl-4">
+                          Bulk Lot #
+                        </div>
+                </div>
+                <div class="col-3">
+  
+                    <div class="div_pad table_items pl-4">
+                        E1332-068
+                      </div>
+                      <div class="div_pad table_items pl-4">
+                          Pilot
+                        </div>
+                        <div class="div_pad table_items pl-4">
+                            OF00000679
+                          </div>
+                  </div>
+            </div>          
+            </div>
+           <div class="col-3">
+             
+             </div>
+             <div class="center">
+             <p > <img src="../assets/images/arrow-down.png" alt="more data" style="width:24px;height:15px"/>
+             </p> 
+             </div>
+             </div>
+
+           
+               
+             
+          </div>
+
+          
+        <div class="row ">
+            <div class="row first_tab2 "  >
+                
+               
+                    <canvas
+                         baseChart
+                         [chartType]="'bar'"
+                         [datasets]="chartData"
+                         [labels]="labels"
+                         
+                         [options]="chartOptions"
+                         [legend]="true" 
+                         [colors]="colors"
+                         (chartClick)="onChartClick($event)">
+                     </canvas>
+           
+                    
+           
+           
+           
+                   
+        </div>
+        </div>
+
+
+
+   
+        
+
+     
+         
+
+            
+            
+  </div>-->
+
+  
+
+ 
+
+
+
+

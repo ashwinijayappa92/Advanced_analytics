@@ -1,0 +1,177 @@
+.user_styling{
+    color: #000;
+    font-size: 25px;
+    padding: 4px;
+}
+.btn_style{
+    background-color: #fb3838;
+    border-radius: 2px;
+    border: 1px solid #fff;
+    margin: 9px;
+}
+.link_style{
+    padding: 2px;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.btn_style{
+    background-color: #fb3838;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    margin: 9px;
+    font-family: arial;
+}
+.bg-dark {
+    background-color: #fff !important;
+    border: 1px solid #776f6f8c;
+   
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #191515e0;
+    font-size:13px;
+}
+.navbar-dark .navbar-brand {
+    color: #191010;
+   
+}
+.styling_logo{
+    color: #fb3838;
+    font-size: 33px;
+}
+.brand_style{
+    padding: 10px;
+    color: #756666 !important;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+.navbar-toggler {
+    padding: .25rem .75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color:#312d2d94;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+.fa_custom {
+    color: rgb(124, 120, 120);
+    font-size: 21px;
+    padding-top: 11px;
+    padding-left: 10px;
+    padding-right: 18px;
+    }
+.img_styling {
+    border-radius:50%;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    }
+.margingg{
+    margin-top:6px;
+}
+.nav_stying{
+    padding-top: 16px;
+    font-size: 18px;
+    font-family: arial;
+}
+
+
+.navbar-toggler[_ngcontent-c1] {
+   
+    background-color: #353e54 !important;
+   
+}
+
+
+
+.img{
+   width: 100%;
+}
+.Search {
+    width: 55px;
+    height: 15px;
+    padding-top:16px;
+    font-family: Arial;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #4a4a4a;
+
+}
+.Oval {
+    width: 38px;
+    height: 38px;
+}
+.nav-item{
+    font-family:arial;
+    padding-right: 14px;
+    padding-left: 0px;
+}
+.notification-1{
+    
+    margin-top: 11px;
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.Predictive-Analytics {
+   
+    font-family: AkzidenzGroteskStd;
+    font-size: 22px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.4;
+    letter-spacing: normal;
+    text-align: center;
+    color: #4a4a4a;
+
+}
+
+.Compare-Products {
+    width: 167px;
+    height: 15px;
+    font-family: Arial;
+    font-size: 13px;
+    padding-top:16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #4a4a4a;
+  }
+  .btn {
+    width: 128px;
+    height: 31px;
+    border-radius: 2px;
+    background-color: #f25f5c;
+    font-family: Arial;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+  }
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+
+  @media (min-width: 1200px){
+    .container {
+        max-width: 1531px;
+    }
+    
+}
+
+
+

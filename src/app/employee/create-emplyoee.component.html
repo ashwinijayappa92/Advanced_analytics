@@ -1,0 +1,341 @@
+<div class="container contain_class2">
+
+
+    <mat-tab-group>
+        <mat-tab label="Microbiology Challenge" class="Microbiology-Challen" style="color:#fff !important">  </mat-tab>
+        <mat-tab label="Analytical Dosage" class="Analytical-Dosage"> </mat-tab>
+        <mat-tab label="Physical Stability" class="Physical-Stability"> </mat-tab>
+        <mat-tab label="Allergy" class="Allergy"> </mat-tab>
+      </mat-tab-group>
+     
+      
+
+        <form class="form-inline form_pad" [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)" >
+          <div class="row"> 
+          <div class="form-group col-md-2  mb-2">
+              
+              <label for="formGroupExampleInput " class="pl-1">Formula Number <img src="./assets/images/question.png"></label>
+              <input type="text" class="form-control form_input" id="formGroupExampleInput" name="fname" formControlName="fname" placeholder="Formula No.">
+              
+            </div>
+            <div class="form-group col-md-2  mb-2">
+                <label for="formGroupExampleInput2">Time Point</label>
+                <input type="text" class="form-control form_input" id="formGroupExampleInput2" name="lname" formControlName="lname" placeholder="Sample size">
+            </div>
+
+           
+            <div class="form-group col-md-2  mb-2">
+                <label for="formGroupExampleInput2">Package Type</label>
+        <select class="form-control form_input" name="pname" formControlName="pname">
+          
+            <option *ngFor="let pt of pakageTypearr">
+                {{pt}}
+              </option>
+          </select>
+              </div>
+
+              <div class="form-group col-md-2  mb-2">
+                  <label for="formGroupExampleInput2">Category</label>
+                  <select class="form-control form_input"  id="country" name="country" formControlName="country">
+                      <option *ngFor="let country of category" [value]="country.value">{{country.name}}</option>
+                    </select>
+              </div>
+
+              <div class="form-group col-md-2  mb-2">
+                  <label for="formGroupExampleInput2">Sub Category</label>
+                  <select class="form-control form_input" id="state" name="state"  formControlName="state">
+                      <option *ngFor="let state of sub_category" [value]="state.value">{{state.name}}</option>
+                    </select>
+              </div>
+
+
+
+        <!----<div class="form-group col-md-2  mb-2">
+                  <label for="formGroupExampleInput2">Package Type</label>
+               <select class="form-control form_input"  id="country" name="country" formControlName="country">
+                  <option *ngFor="let country of category" [value]="country.value">{{country.name}}</option>
+                </select>
+              
+              <div >
+                <select class="form-control form_input" id="state" name="state"  formControlName="state">
+                    <option *ngFor="let state of sub_category" [value]="state.value">{{state.name}}</option>
+                  </select>
+                </div>-->
+      <!---- <select class="form-control form_input" name="dname"  formControlName="dname">
+            <optgroup label="EP - A">
+                <option  value="  EP - A1- Parenteral, eye, intrauterine and intramammary preparations">
+                    EP - A1- Parenteral, eye, intrauterine and intramammary preparations
+                  </option>
+                  <option  value=" 2 - Ear, nasal, cutaneous application and inhalation preparations">
+                      2 - Ear, nasal, cutaneous application and inhalation preparations
+
+                    </option>
+                    <option  value=" 3 - Oral, oromucosal and rectal preparations">
+                        3 - Oral, oromucosal and rectal preparations
+                      </option>
+              </optgroup>
+              <optgroup label="ISO 11930 A" value="ISO 11930 A">
+                  ISO 11930 A
+              </optgroup>
+              <optgroup label=" ISO 11930 B" value=" ISO 11930 B">
+                  ISO 11930 B
+              </optgroup>
+                
+               
+                    
+            </select>
+                </div>-->
+
+              
+              <div class="form-group col-md-2 btn-toolbar">
+                  
+                  <button type="submit" class="btn btn-primary  search serach_btn ">Search</button>
+                  
+                  <button type="submit" class="btn btn-primary  search clear_bt ">Clear</button>
+                  </div>
+          </div>
+          </form>
+        
+     
+         
+        
+
+</div>
+<div class="container-fluid contain_class" style=" background-color: #edf4f8;">
+
+      <div class="row">
+      <div class="row first_tab"  style="background-color:#fff">
+      
+        <div class="col-9">
+            <h4 class="project mt-3 pl-4"> Project Details </h4>
+        <div class="row">
+          <div class="col-3">
+
+              <div class="div_pad table_data pl-4">
+                  Project Name
+                </div>
+                <div class="div_pad table_data pl-4">
+                    Project Rep
+                  </div>
+                  <div class="div_pad table_data pl-4">
+                      Submitter
+                    </div>
+          </div>
+          <div class="col-3">
+
+              <div class="table_items pl-4">
+                VDR16-0098_LPM Extra Doux Pomegranate
+              </div>
+              <div class="div_pad table_items pl-4">
+                  C Vaillant
+                </div>
+                <div class="div_pad table_items pl-4">
+                    David Gauthier
+                  </div>
+
+            </div>
+            <div class="col-3">
+
+                <div class="div_pad table_data pl-4">
+                    Item Code
+
+                  </div>
+                  <div class="div_pad table_data pl-4 ">
+                      Product Category
+                    </div>
+                    <div class="div_pad table_data pl-4">
+                        Brand
+                      </div>
+              </div>
+              <div class="col-3">
+
+                  <div class="div_pad table_items pl-4">
+                      PR-018025
+                    </div>
+                    <div class="div_pad table_items pl-4">
+                        Skin Care - Adult
+                      </div>
+                      <div class="div_pad table_items pl-4">
+                          Le Petit Marseillais
+                        </div>
+                </div>
+          </div>          
+          </div>
+         <div class="col-3">
+           <h4 class="results mt-3 pr-5" style="text-align:center"> Results</h4>
+           <div class="row">
+            <div class="col-6">
+                <div class="div_pad">
+                    <img src="./assets/images/path.png" alt="results" >
+                  </div>
+                  <div class="div_pad Bacteria-Pass"> Bacteria : <span style="color:#63a718 ">Pass</span></div>
+                
+              </div>
+              <div class="col-6">
+                  <div class="div_pad">
+                      <img src="./assets/images/path.png" alt="results" >
+                    </div>
+                    <div class="div_pad Bacteria-Pass"> Yeast :  <span style="color:#63a718 ">Pass</span></div>
+                </div>
+
+           </div>
+           </div>
+           </div>
+        </div>
+
+        
+    
+        <div class="row ">
+            <div class="row first_tab2 "  >
+                <table class="table table-borderless table-bordered"  >
+                    <thead>
+                      <tr style="    height: 60px;">
+                        <th class="results_table">Bacteria</th>
+                        <th class="results_table" style="min-width: 100px;"></th>
+                        <th class="results_table">6 Hours</th>
+                        <th class="results_table">24 Hours</th>
+                        <th class="results_table">48 Hours</th>
+                        <th class="results_table">7 Days</th>
+                        <th class="results_table">14 Days</th>
+                        <th class="results_table">28 Days</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let row of microbiologyChallengeTestResult ">
+                        <td class="result_form_1 pl-4" style="background-color:#f8f8f8">{{row.bacteria}}</td>
+                        <td style="background-color: #e3e6eb;">
+                          <div class="result_form">Log Reduction</div>
+                          <div class="result_form">Confidence</div>
+                          <div class="result_form">Confidence Range</div>
+                        </td>
+                        <td style="background-color: #4072ee; color: #fff;">
+                            <div class="confidence">{{row.hour6.confidence}}%</div>
+                          <div class="log_reduction">{{row.hour6.logReduction}}</div>
+                          
+                          <div class="log_reduction">{{row.hour6.confidenceRange}}</div>
+                        </td>
+                        <td style="background-color: #5080f8; color: #fff;">
+                          
+                          <div class="confidence">{{row.hour24.confidence}}%</div>
+                          <div class="log_reduction">{{row.hour24.logReduction}}</div>
+                          <div class="log_reduction">{{row.hour24.confidenceRange}}</div>
+                        </td>
+                        <td style="background-color: #88befc; color: #fff;">
+                         
+                          <div class="confidence">{{row.hour48.confidence}}%</div>
+                          <div class="log_reduction">{{row.hour48.logReduction}}</div>
+                          <div class="log_reduction">{{row.hour48.confidenceRange}}</div>
+                        </td>
+                        <td style="background-color: #9bcaff;color: #fff;"> 
+                         
+                          <div class="confidence">{{row.days7.confidence}}%</div>
+                          <div class="log_reduction">{{row.days7.logReduction}}</div>
+                          <div class="log_reduction">{{row.days7.confidenceRange}}</div>
+                        </td>
+                        <td style="background-color: #9bb6ff;color: #fff;">
+                         
+                          <div class="confidence">{{row.days14.confidence}}%</div>
+                          <div class="log_reduction">{{row.days14.logReduction}}</div>
+                          <div class="log_reduction">{{row.days14.confidenceRange}}</div>
+                        </td>
+                        <td style="background-color: #a3c1f1cb; color: #fff;">
+                          
+                          <div class="confidence">{{row.days28.confidence}}%</div>
+                          <div class="log_reduction">{{row.days28.logReduction}}</div>
+                          <div class="log_reduction">{{row.days28.confidenceRange}}</div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="col-md-12" *ngIf="microbiologyChallengeTestResult.length == 0">
+                    <p class="text-center results_table">No Data To Show</p>
+                    <mat-spinner *ngIf = "loader" class="spinner_class" [diameter]="60"  style="right:50%;left:50%;"></mat-spinner>
+                    
+                  </div>
+        </div>
+        </div>
+
+
+
+   
+        
+
+     
+          <div class="row ">
+              <div class="row first_tab2"  >
+
+                  <table class="table table-borderless table-bordered">
+                      <thead>
+                        <tr>
+                          <th class="results_table">Criteria</th>
+                          <th class="results_table" style="    text-align: center;">Organism</th>
+                          <th class="results_table" style="    text-align: center;">6 H</th>
+                          <th class="results_table" style="    text-align: center;">24 H</th>
+                          <th class="results_table" style="    text-align: center;">48 H</th>
+                          <th class="results_table" style="    text-align: center;">7 D</th>
+                          <th class="results_table" style="    text-align: center;">14 D</th>
+                          <th class="results_table" style="    text-align: center;">21 D</th>
+                          <th class="results_table" style="    text-align: center;">28 D</th>
+                        </tr>
+                      </thead>
+                      <tbody style="border-top:2px solid  #edf4f8;border-bottom:1px solid  #edf4f8;border-left:4px solid  #46a6e6">
+                        <tr>
+                          <td></td>
+                          <td class="table_items pt-4" style="text-align:center">Bacteria</td>
+                          <td class="table_items pt-4" style="text-align:center;color:#1d88e5">NR</td>
+                          <td class="table_items pt-4" style="text-align:center;color:#1d88e5">NR</td>
+                          <td class="table_items pt-4" style="text-align:center">2.0</td>
+                          <td class="table_items pt-4" style="text-align:center">3.0</td>
+                          <td class="table_items pt-4" style="text-align:center;color:#ffb22b">NI</td>
+                          <td class="table_items pt-4" style="text-align:center ;color:#1d88e5">NR</td>
+                          <td class="table_items pt-4" style="text-align:center;color:#ffb22b">NI</td>
+                        </tr>
+                        <tr>
+                         
+                            <div class=" table_items topical">Topical, Vaginal, Rectal,<br>
+                                Topical-nasal</div>
+                                <td class="table_items" style="text-align: center;">Yeast & Mold</td>
+                                <td class="table_items" style="text-align:center;color:#1d88e5">NR</td>
+                                <td class="table_items" style="text-align:center;color:#1d88e5">NR</td>
+                                <td class="table_items" style="text-align:center ;color:#1d88e5">NR</td>
+                                <td class="table_items" style="text-align:center;color:#1d88e5">NR</td>
+                                <td class="table_items" style="text-align:center">2.0</td>
+                                <td class="table_items" style="text-align:center;color:#1d88e5">NR</td>
+                                <td class="table_items" style="text-align:center;color:#ffb22b">NI</td> 
+                            
+                          </tr>
+                        <tr>
+                         
+                          <td class=""></td>
+                              
+                          
+                        </tr>
+                       
+                     
+
+                      </tbody>
+                    </table>
+
+                    <div style="margin-left: 14px;">
+                        <div class="col-md-12">
+                            <p class="criteria"><b>Note:</b></p>
+                              <p class=" results_table" class="criteria"><b style="color:orange">NI</b> = no more than 0.5 log increase vs. the previous enumeration</p>
+                               <p class="criteria">   NC = no count recovered</p>
+                                  <p class="criteria"><b style="color:#4072ee; ">NR</b> = not required / for information only / Reference WWSP005/WWSP008</p>
+                              
+                            </div>
+                      </div>
+          </div>
+          </div>
+
+            
+            
+  </div>
+
+  
+
+ 
+
+
+
+

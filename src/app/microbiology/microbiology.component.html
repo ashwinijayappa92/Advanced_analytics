@@ -1,0 +1,335 @@
+
+<div class="Microbiology-Challenge">
+
+  <div class="Rectangle" style="background-image:url(./assets/images/background.png);background-repeat: no-repeat;          background-position-y: bottom;">
+    <div style="background-color: #353e54d4;height: 255px;">
+      <div class="card bg-dark" style="border:none; ">
+        <div class="card-body">
+
+         <app-create-list></app-create-list>
+        <!----<mat-tab-group>
+            <mat-tab label="Microbiology Challenge">-->
+              <div>
+                <div class=" bg-dark mr-4 ml-4 mt-4 " style="border:none;">
+                  <div class="row" style="padding: 22px;">
+                    <form [formGroup]="formdata" style="width: 100%; display: inline-flex;" autocomplete="off">
+                      <div class="  col-4">
+                        <label class="labels">Formula Number </label>
+                        <input type="text" class="form-control" name="fname" formControlName="fname" id="formGroupExampleInput"
+                          placeholder="Formula No." autocomplete="off">
+                      </div>
+                      <div class="col-2">
+                        <label class="labels">Package Type</label>
+                        <select class="form-control " name="pname" formControlName="pname" style=" font-family: OpenSans;font-size:13px">
+                          <option value="" class="labels">Select Package Type</option>
+                          <option *ngFor="let pt of pakageTypearr" [value]="pt">{{pt}}</option>
+                        </select>
+                      </div>
+                      <div class="col-2">
+                        <label class="labels">Category</label>
+                        <select class="form-control" id="category" name="country" formControlName="category" style=" font-family: OpenSans;font-size:13px">
+                          <option value="" class="labels">Select Category</option>
+                          <option *ngFor="let country of category" [value]="country.value">{{country.name}}</option>
+                        </select>
+                      </div>
+                      <div class="col-2">
+                        <label class="labels">Sub Category</label>
+                        <select class="form-control " id="state" name="state" formControlName="subcategory" style=" font-family: OpenSans;font-size:13px">
+                          <option value="" class="labels">Select Sub Category</option>
+                          <option *ngFor="let state of sub_category" [value]="state.value">{{state.name}}</option>
+                        </select>
+                      </div>
+                      <div class="col-2 pt-4 text-right">
+                        <button type="button" class="btn btn-primary mr-2  " (click)="onClickSubmit(formdata.value)">Search</button>
+                        <button type="clear" class="btn btn-primary clear" (click)="clearSearch()">Clear</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+        <div>
+       <div class="card mr-4 ml-4 mb-4"  style="margin-top:-22px;box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);background-color: #ffffff; border-radius: 5px;">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-9" style="border-right: 1px solid #e9e9e9;">
+                        <div class="row">
+                          <div class="col-12">
+                            <h6 class="card-subtitle mb-2 text-muted titles">Project Details</h6>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-3 sub_titles"> Project Name </div>
+                          <div class="col-3 sub_titles_content"> <span *ngIf="checking">{{result.projectDetails.projectName}}</span></div>
+                          <div class="col-3 sub_titles">Item Code</div>
+                          <div class="col-3 sub_titles_content"> <span *ngIf="checking">{{result.projectDetails.itemCode}}</span></div>
+
+                        </div>
+                        <div class="row">
+                          <div class="col-3 sub_titles"> Project Rep</div>
+                          <div class="col-3 sub_titles_content"><span *ngIf="checking">{{result.projectDetails.projectRep}}</span></div>
+                          <div class="col-3 sub_titles"> Product Category</div>
+                          <div class="col-3 sub_titles_content"><span *ngIf="checking">{{result.projectDetails.productCategory}}</span></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-3 sub_titles"> Submitter</div>
+                          <div class="col-3 sub_titles_content"> <span *ngIf="checking">{{result.projectDetails.submitter}}</span></div>
+                          <div class="col-3 sub_titles">Brand</div>
+                          <div class="col-3 sub_titles_content"> <span *ngIf="checking">{{result.projectDetails.brand}}</span></div>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="row">
+                          <div class="col-12">
+                            <h6 class="card-subtitle mb-2 text-muted text-center titles">Results</h6>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-6">
+                            <div class="text-center">
+                              <!----<i class="fa fa-check fa-3x text-success" aria-hidden="true"></i> -->
+                              <span *ngIf="checking"> <i class="fa fa-close" style="font-size:48px;color:red"
+                                  aria-hidden="true"></i></span>
+                            </div>
+                            <div class="text-center"><span *ngIf="checking">{{result.results[0].organism}}: <span style="color:red">{{result.results[0].value | uppercase}}</span></span>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="text-center">
+                              <!----<i class="fa fa-check fa-3x text-success" aria-hidden="true"></i>-->
+                              <span *ngIf="checking"> <i class="fa fa-close" style="font-size:48px;color:red"
+                                  aria-hidden="true"></i></span>
+                            </div>
+                            <div class="text-center"> <span *ngIf="checking">{{result.results[1].organism }}:<span style="color:red">
+                                  {{result.results[1].value | uppercase}} </span></span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+
+                <div class="card mr-4 ml-4 mb-4" style="box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);background-color: #ffffff; border-radius: 5px;">
+                  <div class="card-body">
+                    <table class="table table-borderless table-sm">
+                      <thead>
+                        <tr>
+                          <th scope="col " class="organisms_bacteria">Organism</th>
+                          <th scope="col" class="organisms"></th>
+                          <th scope="col" class="organisms">6 Hours</th>
+                          <th scope="col" class="organisms">24 Hours</th>
+                          <th scope="col" class="organisms">48 Hours</th>
+                          <th scope="col" class="organisms">7 Days</th>
+                          <th scope="col" class="organisms">14 Days</th>
+                          <th scope="col" class="organisms">28 Days</th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td colspan="6" class="organisms_bacteria"><span *ngIf="checking"><b>{{result.organisms[0].organismName}}</b></span>
+                          </td>
+                        </tr>
+                        <tr *ngFor="let row of bacteriaTypeResponseArray" style="border-bottom:1px solid #fff">
+                          <td style="background-color: #f8f8f8;  padding: 23px; ">{{row.organism}}</td>
+                          <td align="right" style="background-color: #e3e6eb;">
+                            <div class="Confidence pr-2">Log Reduction</div>
+                            <div class="Confidence pr-2">Confidence</div>
+                            <div class="Confidence pr-2">Confidence Range</div>
+                            <div class="Confidence pr-2">Result</div>
+
+                          </td>
+                          <td align="center" style="background-color: #4072ee; color: #fff;">
+                            <div class="confidence_value">{{row.hour6.confidence}}%</div>
+                            <div class="confidence_cat">{{row.hour6.logReduction}}</div>
+                            <div class="confidence_cat">{{row.hour6.confidenceRange}}</div>
+                            <div class="confidence_cat">{{row.hour6.result | uppercase}}</div>
+
+                          </td>
+                          <td align="center" style="background-color: #5080f8; color: #fff;">
+                            <div class="confidence_value">{{row.hour24.confidence}}%</div>
+                            <div class="confidence_cat">{{row.hour24.logReduction}}</div>
+                            <div class="confidence_cat">{{row.hour24.confidenceRange}}</div>
+                            <div class="confidence_cat">{{row.hour24.result | uppercase}}</div>
+
+                          </td>
+                          <td align="center" style="background-color: #88befc; color: #fff;">
+                            <div class="confidence_value">{{row.hour48.confidence}}%</div>
+                            <div class="confidence_cat">{{row.hour48.logReduction}}</div>
+                            <div class="confidence_cat">{{row.hour48.confidenceRange}}</div>
+                            <div class="confidence_cat">{{row.hour48.result | uppercase}}</div>
+                          </td>
+                          <td align="center" style="background-color: #9bcaff;color: #fff;">
+                            <div class="confidence_value">{{row.days7.confidence}}%</div>
+                            <div class="confidence_cat">{{row.days7.logReduction}}</div>
+                            <div class="confidence_cat">{{row.days7.confidenceRange}}</div>
+                            <div class="confidence_cat">{{row.days7.result | uppercase}}</div>
+                          </td>
+                          <td align="center" style="background-color: #9bb6ff;color: #fff;">
+                            <div class="confidence_value">{{row.days14.confidence}}%</div>
+                            <div class="confidence_cat">{{row.days14.logReduction}}</div>
+                            <div class="confidence_cat">{{row.days14.confidenceRange}}</div>
+                            <div class="confidence_cat">{{row.days14.result | uppercase}}</div>
+                          </td>
+
+                          <td align="center" style="background-color: #a3c1f1cb; color: #fff;">
+                            <div class="confidence_value">{{row.days28.confidence}}%</div>
+                            <div class="confidence_cat">{{row.days28.logReduction}}</div>
+                            <div class="confidence_cat">{{row.days28.confidenceRange}}</div>
+                            <div class="confidence_cat">{{row.days28.result | uppercase}}</div>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tbody>
+                        <tr>
+                          <td colspan="6" class="organisms_bacteria"> <span *ngIf="checking"><b>{{result.organisms[1].organismName}}</b></span></td>
+                        </tr>
+                        <tr *ngFor="let row of yeastTypeResponseArray" style="border-bottom:1px solid #fff">
+                          <td style="background-color: #f8f8f8;  padding: 23px;"> {{row.organism}}</td>
+                          <td align="right" style="background-color: #e3e6eb;">
+                            <div class="Confidence pr-2">Log Reduction</div>
+                            <div class="Confidence pr-2">Confidence</div>
+                            <div class="Confidence pr-2">Confidence Range</div>
+                            <div class="Confidence pr-2">Result</div>
+
+                          </td>
+                          <td align="center" style="background-color: #4072ee; color: #fff;">
+                            <div class="confidence_value">{{row.hour6.confidence}}%</div>
+                            <div class="confidence_cat">{{row.hour6.logReduction}}</div>
+                            <div class="confidence_cat">{{row.hour6.confidenceRange}}</div>
+                            <div class="confidence_cat">{{row.hour6.result | uppercase}}</div>
+
+                          </td>
+                          <td align="center" style="background-color: #5080f8; color: #fff;">
+
+                            <div class="confidence_value">{{row.hour24.confidence}}%</div>
+                            <div class="confidence_cat">{{row.hour24.logReduction}}</div>
+                            <div class="confidence_cat">{{row.hour24.confidenceRange}}</div>
+                            <div class="confidence_cat">{{row.hour24.result | uppercase}}</div>
+
+                          </td>
+                          <td align="center" style="background-color: #88befc; color: #fff;">
+
+                            <div class="confidence_value">{{row.hour48.confidence}}%</div>
+                            <div class="confidence_cat">{{row.hour48.logReduction}}</div>
+                            <div class="confidence_cat">{{row.hour48.confidenceRange}}</div>
+                            <div class="confidence_cat">{{row.hour48.result | uppercase}}</div>
+
+                          </td>
+                          <td align="center" style="background-color: #9bcaff;color: #fff;">
+
+                            <div class="confidence_value">{{row.days7.confidence}}%</div>
+                            <div class="confidence_cat">{{row.days7.logReduction}}</div>
+                            <div class="confidence_cat">{{row.days7.confidenceRange}}</div>
+                            <div class="confidence_cat">{{row.days7.result | uppercase }}</div>
+
+                          </td>
+                          <td align="center" style="background-color: #9bb6ff;color: #fff;">
+
+                            <div class="confidence_value">{{row.days14.confidence}}%</div>
+                            <div class="confidence_cat">{{row.days14.logReduction}}</div>
+                            <div class="confidence_cat">{{row.days14.confidenceRange}}</div>
+                            <div class="confidence_cat">{{row.days14.result | uppercase}}</div>
+
+                          </td>
+
+                          <td align="center" style="background-color: #a3c1f1cb; color: #fff;">
+
+                            <div class="confidence_value">{{row.days28.confidence}}%</div>
+                            <div class="confidence_cat">{{row.days28.logReduction}}</div>
+                            <div class="confidence_cat">{{row.days28.confidenceRange}}</div>
+                            <div class="confidence_cat">{{row.days28.result | uppercase}}</div>
+
+                          </td>
+
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="col-md-12">
+                    <p class="text-center results_table pl-5 " *ngIf="bacteriaTypeResponseArray.length==0" style="font-size:16px;font-family: openSans;margin-top: -33px;">No
+                      Data
+                      To Show</p>
+                  </div>
+                  <div id="processing" class="spinner_class" *ngIf="loader">
+                    <mat-spinner [diameter]="60" style="right:50%;left:50%;z-index: 1000"></mat-spinner>
+                  </div>
+                </div>
+
+
+
+                <div class="card mr-4 ml-4 mb-4" style="box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);background-color: #ffffff; border-radius: 5px;">
+                  <div class="card-body">
+                    <table class="table table-borderless ">
+                      <thead>
+                        <tr>
+                          <th scope="col" class="criteria_content" style="text-align: left !important">Criteria</th>
+
+                          <th scope="col" class="criteria_content">Organism</th>
+                          <th scope="col" class="criteria_content">6 H</th>
+                          <th scope="col" class="criteria_content">24 H</th>
+                          <th scope="col" class="criteria_content">48 H</th>
+                          <th scope="col" class="criteria_content">7 D</th>
+                          <th scope="col" class="criteria_content">14 D</th>
+                          <th scope="col" class="criteria_content">28 D</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table_body br-left">
+                        <tr *ngFor="let row of criteriaArray ">
+                          <td width="20%" *ngIf="row.organism=='Bacteria'" rowspan="2" class="criteria sub_titles_content"><span
+                              *ngIf="checking">
+                              {{result.criteria.name}} <p>{{result.criteria.subName}}</p>
+                            </span></td>
+                          <td class="criteria_content"><span *ngIf="checking"> {{row.organism}}</span></td>
+                          <td class="criteria_content"><span *ngIf="checking"> {{row.H6.value}}</span></td>
+                          <td class="criteria_content"> <span *ngIf="checking">{{row.H24.value}}</span></td>
+                          <td class="criteria_content"><span *ngIf="checking"> {{row.H48.value}}</span></td>
+                          <td class="criteria_content"><span *ngIf="checking">{{row.D7.value}}</span></td>
+                          <td class="criteria_content"><span *ngIf="checking">{{row.D14.value}}</span></td>
+                          <td class="criteria_content"> <span *ngIf="checking">{{row.D28.value}}</span></td>
+
+                        </tr>
+
+                      </tbody>
+                    </table>
+
+                    <div>
+                      <div class="col-md-12" *ngIf="checking">
+                        <p> <b>Note:</b></p>
+                        <p><b style="color:orange">NI</b> = no more than 0.5 log increase vs. the previous enumeration</p>
+                        <p> NC = no count recovered</p>
+                        <p><b style="color:#4072ee; ">NR</b> = not required / for information only / Reference
+                          WWSP005/WWSP008</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+             
+         <!---- </mat-tab>
+           
+             <mat-tab label="Analytical Dosage"><app-dosage></app-dosage></mat-tab>
+            <mat-tab label="Physical Stability">
+                 
+            </mat-tab>
+            <mat-tab label="Allergy"> </mat-tab>
+          </mat-tab-group>-->
+          
+        
+  </div>
+
+
+
+</div>

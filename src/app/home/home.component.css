@@ -1,0 +1,309 @@
+.heading{
+    text-align: center;
+font-family: sans-serif;
+font-size: 33px;
+padding-top: 62px;
+
+}
+.para{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+.img_styling{
+    margin-right:auto;
+    margin-left:auto;
+    width:60%;
+    display:block;
+}
+.row_styling{
+   
+    margin-right: 112px !important;
+    margin-left: 202px !important;
+}
+html, body {
+    height: 100%;
+}
+.titles_style{
+    
+  height: 23px;
+  font-family: AkzidenzGroteskStd;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 3.28;
+  letter-spacing: normal;
+  color: #c8d4ee;
+}
+.buttons_styles{
+    width: 400px;
+  height: 56px;
+  border-radius: 2px;
+  box-shadow: -2px 0 0 0 #f25f5c;
+  background-color: rgba(42, 51, 69, 0.4);
+}
+.Microbiology {
+    width: 195px;
+    height: 195px;
+    object-fit: contain;
+  }
+  .Analytical {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+  }
+
+  .Physical {
+    width: 200px;
+    height: 188px;
+    object-fit: contain;
+  }
+  .Allergy {
+    width: 191px;
+    height: 201px;
+    object-fit: contain;
+  }
+  .Rectangle{ 
+    width: 1349px;;
+  height: 1024px;
+  background-image: linear-gradient(to right, #353e54, #353e54);
+  
+  }
+  .container-fluid{
+    background-image: linear-gradient(to right, #353e54, #353e54); 
+  }
+  .Welcome-to-Product-A {
+  
+    height: 46px;
+    font-family: AkzidenzGroteskStd;
+    font-size: 40px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+  }
+  .An-innovation-platfo {
+   
+    height: 21px;
+    font-family: Arial;
+    font-size: 19px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .Microbiology-Challen{
+      width: 176px;
+      padding-left: 24px;
+      padding-top: 15px;
+    height: 65px;
+    font-family: AkzidenzGroteskStd;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.28;
+    letter-spacing: normal;
+    text-align: center;
+    color: #c8d4ee;
+  }
+  .Analytical-Dosage-Te
+  {
+      width: 170px;
+      padding-left: 40px;
+    padding-top: 12px;
+  height: 46px;
+  font-family: AkzidenzGroteskStd;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.28;
+  letter-spacing: normal;
+  text-align: center;
+  color: #c8d4ee;
+  }
+  .Physical-Stability{
+ 
+  width: 140px;
+  padding-left: 55px;
+  padding-top: 20px;
+  height: 46px;
+  font-family: AkzidenzGroteskStd;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.28;
+  letter-spacing: normal;
+  text-align: center;
+  color: #c8d4ee;
+  }
+
+  .Allergy-Predictive {
+    width: 156px;
+    padding-left: 58px;
+    padding-top: 8px;
+    height: 46px;
+    font-family: AkzidenzGroteskStd;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.28;
+    letter-spacing: normal;
+    text-align: center;
+    color: #c8d4ee;
+  }
+  .Predictive-Analytics {
+      width: 199px;
+  height: 23px;
+  font-family: AkzidenzGroteskStd;
+  font-size: 22px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.05;
+  letter-spacing: normal;
+  text-align: center;
+  color: #4a4a4a;
+  }
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    color: #fff;
+    word-wrap: break-word;
+    background-color: #fff0;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+.card-title {
+    margin-bottom: .75rem;
+    font-family: AkzidenzGroteskStd;
+    font-size:18px;
+}
+.row_boxes{
+    padding-left: 241px;
+    padding-right: 241px;
+    margin:0px;
+}
+.row_pading_boxes{
+    padding-bottom: 2px;
+}
+.img_icons{
+    float: right;
+    width: 82px;
+    height: 60px;
+     object-fit: contain;
+}
+.line {
+    float: right;
+    width: 35px;
+    height: 58px;
+    object-fit: contain;
+  }
+  .chart{
+    width: 35px;
+    float: right;
+    height: 58.1px;
+    object-fit: contain;
+  }
+  .img_recog{
+    width: 24px;
+    height: 52px;
+    float: right;
+    object-fit: contain;
+  }
+  hr {
+    width: 1280px;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    border: 0;
+    border-top: 2px solid rgba(218, 212, 212, 0.1);
+}
+ 
+.homePage-text{
+    font-family: AkzidenzGroteskStd;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.28;
+  letter-spacing: normal;
+  text-align: center;
+  color: #c8d4ee;
+}
+.vertical-align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .container_xs {
+    width: 100%;
+    padding-right: 96px;
+    padding-left: 96px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.container-fluid {
+    width: 100%;
+    padding-right: 179px;
+    padding-left: 167px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media only screen and (min-width: 1000px) {
+   
+    .container-fluid {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .row{
+        display: flex;
+    flex-wrap: wrap;
+    margin-right: 0px;
+    margin-left: 0px;
+    }
+}
+
+
+ 
+  .styling_crd{
+    width: 400px;
+    height: 56px;
+    border-radius: 5px;
+    box-shadow: -2px 0 0 0 #f25f5c;
+    border-bottom: 2px solid #80808033;
+    background-color: rgba(42, 51, 69, 0.4);
+  }
+  .img_stly{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 297px;
+  }
+  .row{
+      display: flex;
+  flex-wrap: wrap;
+  margin-right: 4px;
+  margin-left: 72px;
+  }

@@ -1,0 +1,135 @@
+<div class="Microbiology-Challenge" style="background-color:#edf4f8 !important">
+  <div class="Rectangle" style="background-image:url(./assets/images/background.png);background-repeat: no-repeat; background-position-y: bottom;">
+    <div style="background-color: #353e54d4;height: 352px;">
+
+      <div class="card bg-dark" style="border:none; ">
+        <div class="card-body">
+          <app-create-list></app-create-list>
+          <div>
+            <div class=" bg-dark mr-4 ml-4 mt-4 " style="border:none; background-image:url(./assets/images/search-bg.png);">
+              <div class="row" style="padding: 22px;">
+
+                <form [formGroup]="formdata" style="width: 100%; display: inline-flex;">
+
+                  <div class=" col-3">
+                    <label class="labels">Formula Number </label>
+                    <input type="email" class="form-control" name="fname" formControlName="fname" id="formGroupExampleInput"
+                      placeholder="Formula No." style=" font-size: 14px !important;" autocomplete="off" [value]="searchValue">
+                  </div>
+                  <div class="col-2">
+                    <label class="labels">Package Type</label>
+                    <select class="form-control " name="pname" formControlName="pname" style=" font-family: OpenSans;font-size:13px">
+                      <option value="" disabled>Select Package Type</option>
+                      <option *ngFor="let pt of pakageTypearr" [value]="pt">{{pt}}</option>
+                    </select>
+                  </div>
+                  <div class="  col-2">
+                    <label class="labels">Package Volume </label>
+                    <input type="email" class="form-control" name="plname" formControlName="plname" placeholder="Package Volume"
+                      style="font-size: 14px !important;">
+                  </div>
+                 <div class="col-4 pt-4 text-right">
+                    <button type="button" class="btn btn-primary mr-2"   [disabled]="!getIngredients"  (click)="onFormulaSearch(formdata.value)">Get
+                      ingredients</button>
+                    <button type="button" class="btn btn-primary mr-2 " (click)="onSubmitIngrediant(formdata.value)"
+                      [disabled]="!ratiovalues">Search </button>
+                    <button type="clear" class="btn btn-primary clear" (click)="clearSearch()">Clear</button>
+
+                  </div>
+
+                </form>
+
+
+                <div class="card-body col-12" style=" background-color: #575f712b;">
+                  <h5 class="card-title" style="color:#fff;font-size:14px;font-family:arial;"> Select the ingredient:</h5>
+                  <div class='row'>
+
+                    <div class="col-2">
+                      <label class="mb-3" style="color:#fff;font-size:13px;font-family:arial;">Ingredients </label>
+                      <h5 style="color:#fff;font-size:13px;font-family:arial;"> Initial Concentration</h5>
+                    </div>
+
+                    <div class="col">
+                      <div class="row" style="max-height:70px;overflow-y:scroll ">
+                        <div class="col-2" *ngFor="let ingredient of dosageResponse">
+                          <mat-checkbox #chkEnable class="test2" title="{{ingredient.ingredient}}"  (click)="ingredient.checked = !ingredient.checked; update(ingredient)">{{ingredient.ingredient}}</mat-checkbox>
+                          <input type="text" [disabled]="!chkEnable.checked" class="form-control" [(ngModel)]="ingredient.initialConcentration"
+                            id="{{ingredient}}" style=" margin-bottom: 13px;width:90px;height:27px" >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="card mr-4 ml-4 mb-4" style="top: -23px;box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);background-color: #ffffff; border-radius: 5px;">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-9">
+          <div class="row">
+            <div class="col-12">
+              <h6 class="card-subtitle mb-2 text-muted titles">Project Details</h6>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3 sub_titles"> Project Name</div>
+            <div class="col-3 sub_titles_content"> <span *ngIf="checking">{{projectDetails.projectName}}</span></div>
+            <div class="col-3 sub_titles">Formula</div>
+            <div class="col-3 sub_titles_content"> <span *ngIf="checking">{{projectDetails.formula}}</span></div>
+
+          </div>
+          <div class="row">
+            <div class="col-3 sub_titles">Test Article</div>
+            <div class="col-3 sub_titles_content"><span *ngIf="checking">{{projectDetails.testArticle}}</span></div>
+            <div class="col-3 sub_titles">Batch Type</div>
+            <div class="col-3 sub_titles_content"><span *ngIf="checking">{{projectDetails.batchType}}</span></div>
+          </div>
+          <div class="row">
+            <div class="col-3 sub_titles"> Product</div>
+            <div class="col-3 sub_titles_content"> <span *ngIf="checking">{{projectDetails.product}}</span></div>
+            <div class="col-3 sub_titles">Bulk Lot #</div>
+            <div class="col-3 sub_titles_content"> <span *ngIf="checking">{{projectDetails.blulkLot}}</span></div>
+          </div>
+        </div>
+        <div class="col-3">
+        </div>
+      </div>
+      <div id="processing" class="spinner_class" *ngIf="loader">
+        <mat-spinner [diameter]="60" style="right:50%;left:50%;z-index: 1000"></mat-spinner>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="card mr-4 ml-4 mb-4" style="box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);background-color: #ffffff; border-radius: 5px;">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-12">
+
+         <app-graph></app-graph>
+        </div>
+      </div>
+      <div id="processing" class="spinner_class" *ngIf="loader">
+        <mat-spinner [diameter]="60" style="right:50%;left:50%;z-index: 1000"></mat-spinner>
+      </div>
+    </div>
+  </div>
+</div>
